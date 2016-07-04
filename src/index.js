@@ -1,4 +1,4 @@
 import ButtonLoader from './ButtonLoader';
 import Spinner      from './Spinner';
 
-export { Spinner, ButtonLoader };
+module.export = { Spinner, ButtonLoader };
