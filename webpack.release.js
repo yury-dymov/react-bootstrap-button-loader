@@ -3,12 +3,14 @@ var path          = require('path');
 var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  entry:   [
-    './src/ButtonLoader'
-  ],
+  entry: {
+    ButtonLoader: ['./src/ButtonLoader'],
+    Spinner: ['./src/Spinner'],
+    index: './src/index'
+  },
   output:  {
     path:          path.join(__dirname, 'dist'),
-    filename:      'ButtonLoader.js',
+    filename:      '[name].js',
     libraryTarget: 'umd'
   },
   externals: [nodeExternals()],

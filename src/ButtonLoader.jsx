@@ -1,9 +1,11 @@
 import React, { Component, PropTypes }  from 'react';
 
 import Button                           from 'react-bootstrap/lib/Button';
-import SpinnerIcon                      from 'react-loader';
+
+import Spinner                          from './Spinner.jsx';
 
 import omit                             from 'lodash/omit';
+
 
 export default class ButtonLoader extends Component {
   static propTypes = {
@@ -12,47 +14,21 @@ export default class ButtonLoader extends Component {
     children:       PropTypes.node,
     onClick:        PropTypes.func,
     disabled:       PropTypes.bool,
-    bsStyle:        PropTypes.string,
-    spinColorDark:  PropTypes.string,
-    spinColorLight: PropTypes.string,
-    spinConfig:     PropTypes.object
+    bsStyle:        PropTypes.string
   };
 
   static defaultProps = {
     icon:           null,
     loading:        false,
-    spinConfig:     {
-      lines:  15,
-      length: 4,
-      width:  2,
-      radius: 3
-    },
-    spinColorDark:  '#444',
-    spinColorLight: '#fff',
     children:       null,
     style: {}
   };
 
   renderIcon() {
-    const { loading, icon, bsStyle, spinColorDark, spinColorLight } = this.props;
+    const { loading, icon } = this.props;
 
     if (loading) {
-      const style = {
-        position:     'relative',
-        display:      'inline-block',
-        width:        '16px',
-        height:       '11px'
-      };
-
-      const spinColor = (!bsStyle || bsStyle === 'default') ? spinColorDark : spinColorLight;
-
-      return (
-        <div style={{ display: 'inline-block' }}>
-          <div style={style}>
-            <SpinnerIcon {...this.props.spinConfig} color={spinColor} loaded={false} />
-          </div>
-        </div>
-      );
+      return <Spinner />;
     }
 
     return icon;

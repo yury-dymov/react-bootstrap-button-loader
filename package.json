@@ -2,7 +2,7 @@
   "name": "react-bootstrap-button-loader",
   "version": "1.0.0",
   "description": "React ButtonLoader with Bootstrap flavor",
-  "main": "dist/ButtonLoader.js",
+  "main": "dist/index.js",
   "scripts": {
     "release": "webpack --verbose --colors --display-error-details --config webpack.release.js -p"
   },
