@@ -7,7 +7,7 @@ import Spinner                          from './Spinner.jsx';
 import omit                             from 'lodash/omit';
 
 
-export default class ButtonLoader extends Component {
+class ButtonLoader extends Component {
   static propTypes = {
     icon:           PropTypes.node,
     loading:        PropTypes.bool,
@@ -45,3 +45,7 @@ export default class ButtonLoader extends Component {
     );
   }
 }
+
+export default ButtonLoader;
+
+export { ButtonLoader, Spinner };

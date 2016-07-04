@@ -4,14 +4,13 @@ var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
-    ButtonLoader: ['./src/ButtonLoader'],
     Spinner: ['./src/Spinner'],
-    index: './src/index'
+    index: './src/ButtonLoader'
   },
   output:  {
     path:          path.join(__dirname, 'dist'),
     filename:      '[name].js',
-    libraryTarget: 'umd'
+    libraryTarget: 'commonjs2'
   },
   externals: [nodeExternals()],
   plugins: [
