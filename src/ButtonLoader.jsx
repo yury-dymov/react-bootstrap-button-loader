@@ -1,32 +1,26 @@
-import React, { Component, PropTypes }  from 'react';
+import React, { PropTypes } from 'react';
+import Button               from 'react-bootstrap/lib/Button';
+import Spinner              from './Spinner';
 
-import Button                           from 'react-bootstrap/lib/Button';
+const propTypes = {
+  bsStyle:        PropTypes.string,
+  children:       PropTypes.node,
+  disabled:       PropTypes.bool,
+  icon:           PropTypes.node,
+  loading:        PropTypes.bool,
+  style:          PropTypes.object,
+};
 
-import Spinner                          from './Spinner.jsx';
-
-import omit                             from 'lodash/omit';
-
-
-class ButtonLoader extends Component {
-  static propTypes = {
-    icon:           PropTypes.node,
-    loading:        PropTypes.bool,
-    children:       PropTypes.node,
-    onClick:        PropTypes.func,
-    disabled:       PropTypes.bool,
-    bsStyle:        PropTypes.string
-  };
-
-  static defaultProps = {
-    icon:           null,
-    loading:        false,
-    children:       null,
-    style: {}
-  };
-
-  renderIcon() {
-    const { loading, icon } = this.props;
-
+function ButtonLoader({
+  bsStyle   = 'default',
+  children  = null,
+  disabled  = false,
+  icon      = null,
+  loading   = false,
+  style     = {},
+  ...rest,
+}) {
+  function renderIcon() {
     if (loading) {
       return <Spinner />;
     }
@@ -34,17 +28,12 @@ class ButtonLoader extends Component {
     return icon;
   }
 
-  render() {
-    const { disabled, loading, children } = this.props;
-    const buttonDisabled = disabled || loading;
+  const buttonDisabled = disabled || loading;
 
-    const props = omit(this.props, ['disabled', 'loading', 'children', 'icon']);
-
-    return (
-      <Button disabled={buttonDisabled} {...props}>{this.renderIcon()} {children}</Button>
-    );
-  }
+  return <Button bsStyle={bsStyle} disabled={buttonDisabled} {...rest}>{renderIcon()} {children}</Button>;
 }
+
+ButtonLoader.propTypes = propTypes;
 
 export default ButtonLoader;
 
