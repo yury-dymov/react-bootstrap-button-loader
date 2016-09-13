@@ -3,6 +3,7 @@
 .eslintrc
 .istanbul.yml
 .travis.yml
+coverage
 demo
 docs
 src
