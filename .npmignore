@@ -1,6 +1,10 @@
 .idea
 .babelrc
 .eslintrc
+.istanbul.yml
+.travis.yml
 demo
+docs
 src
+test
 webpack.release.js
