@@ -27,18 +27,22 @@ Bootstrap style, supported values: `default`, `primary`, `success`, `info`, `war
 
 ### disabled: boolean, default: false
 Set this prop `true` to disable button.
+
 *Note:* button in loading state is disabled and this behavior is not overridable even if `false` value is explicitly provided.
 
 ### loading: boolean, default: false
 This prop controls Button loading state.
+
 While loading, Button is disabled and icon provided via props is replaced with Spinner.
 
 ### icon: node, default: null
 Buttons with icons are better!
+
 Provided icon is shown if Button is not in a loading state. Otherwise Spinner is rendered.
 
 ### spinColor: string, default: '#fff'
 Spinner color for loading state.
+
 While white color used by default works fine for most cases, for different bootstrap themes and bsStyles it might be better to use other colors instead.
 
 # License
