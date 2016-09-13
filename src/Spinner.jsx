@@ -2,16 +2,12 @@ import React, { PropTypes } from 'react';
 import SpinnerIcon          from 'react-loader';
 
 const propTypes = {
-  bsStyle:        PropTypes.string,
-  spinColorDark:  PropTypes.string,
-  spinColorLight: PropTypes.string,
+  spinColor:      PropTypes.string,
   spinConfig:     PropTypes.object,
 };
 
 function Spinner({
-  bsStyle         = 'default',
-  spinColorDark   = '#444' ,
-  spinColorLight  = '#fff',
+  spinColor       = '#fff',
   spinConfig      = {
     length: 4,
     lines:  15,
@@ -27,11 +23,9 @@ function Spinner({
     width:        '16px',
   };
 
-  const spinColor = (!bsStyle || bsStyle === 'default') ? spinColorDark : spinColorLight;
-
   return (
-    <div style={{ display: 'inline-block' }}>
-      <div style={style} {...rest}>
+    <div style={{ display: 'inline-block' }} {...rest}>
+      <div style={style}>
         <SpinnerIcon {...spinConfig} color={spinColor} loaded={false} />
       </div>
     </div>

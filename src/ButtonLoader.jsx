@@ -8,7 +8,7 @@ const propTypes = {
   disabled:       PropTypes.bool,
   icon:           PropTypes.node,
   loading:        PropTypes.bool,
-  style:          PropTypes.object,
+  spinColor:      PropTypes.string,
 };
 
 function ButtonLoader({
@@ -17,12 +17,12 @@ function ButtonLoader({
   disabled  = false,
   icon      = null,
   loading   = false,
-  style     = {},
+  spinColor = '#fff',
   ...rest,
 }) {
   function renderIcon() {
     if (loading) {
-      return <Spinner />;
+      return <Spinner spinColor={spinColor} />;
     }
 
     return icon;
