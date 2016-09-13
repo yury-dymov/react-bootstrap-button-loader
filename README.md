@@ -16,7 +16,6 @@ Demo and playground are available [here](https://yury-dymov.github.io/react-boot
 import Button from 'react-bootstrap-button-loader';
 
 <Button loading={this.state.loading}>Press me!</Button>
-
 ```
 
 # Configurable Props
