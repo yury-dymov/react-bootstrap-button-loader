@@ -1,12 +1,12 @@
 {
   "name": "react-bootstrap-button-loader",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "React ButtonLoader with Bootstrap flavor",
   "main": "dist/index.js",
   "scripts": {
-    "release": "webpack --verbose --colors --display-error-details --config webpack.release.js -p",
-    "test": "node node_modules/mocha/bin/mocha --compilers js:babel-core/register",
-    "coverage": "istanbul cover _mocha -- --compilers js:babel-core/register"
+    "release": "./node_modules/.bin/webpack --verbose --colors --display-error-details --config webpack.release.js -p",
+    "test": "./node_modules/.bin/mocha --compilers js:babel-core/register",
+    "coverage": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",

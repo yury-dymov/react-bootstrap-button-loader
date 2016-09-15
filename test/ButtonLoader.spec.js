@@ -114,20 +114,29 @@ describe('children prop is used', () => {
   });
 });
 
-describe('bsStyle prop is propagated', () => {
+describe('bsStyle, spinColor, style and className props are propagated', () => {
 
   it('bsStyle: success -> .btn-success', () => {
     const component = render(<ButtonLoader bsStyle="success" children="Press me" />);
 
     expect(component.find('.btn-success')).to.have.length(1);
   });
-});
-
-describe('spinColor prop is propagated', () => {
 
   it('expect Spinner to have color #333', () => {
     const component = mount(<ButtonLoader  children="Press me" loading spinColor="#333" />);
 
     expect(component.find(Spinner).props().spinColor).to.equal('#333');
+  });
+
+  it('className: "temp"', () => {
+    const component = render(<ButtonLoader className="temp" />);
+
+    expect(component).to.have.attr('class').match(/temp/);
+  });
+
+  it('style: {{ zIndex: "-9999" }}', () => {
+    const component = render(<ButtonLoader style={{ zIndex: '-9999' }} />);
+
+    expect(component).to.have.attr('style').match(/\-9999/);
   });
 });
