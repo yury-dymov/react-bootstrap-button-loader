@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/yury-dymov/react-bootstrap-button-loader#readme",
   "dependencies": {
+    "prop-types": "^15.5.10",
     "react-loader": "^2.4.0"
   },
   "peerDependencies": {

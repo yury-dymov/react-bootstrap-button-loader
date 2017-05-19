@@ -1,5 +1,6 @@
-import React, { PropTypes } from 'react';
-import SpinnerIcon          from 'react-loader';
+import React       from 'react';
+import PropTypes   from 'prop-types';
+import SpinnerIcon from 'react-loader';
 
 const propTypes = {
   spinColor:      PropTypes.string,
