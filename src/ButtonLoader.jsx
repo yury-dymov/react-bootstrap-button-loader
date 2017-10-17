@@ -10,6 +10,7 @@ const propTypes = {
   icon:           PropTypes.node,
   loading:        PropTypes.bool,
   spinColor:      PropTypes.string,
+  spinAlignment:  PropTypes.string
 };
 
 function ButtonLoader({
@@ -19,11 +20,12 @@ function ButtonLoader({
   icon      = null,
   loading   = false,
   spinColor = '#fff',
+  spinAlignment = 'left',
   ...rest,
 }) {
   function renderIcon() {
     if (loading) {
-      return <Spinner spinColor={spinColor} />;
+      return <Spinner spinColor={spinColor} spinAlignment={spinAlignment} />;
     }
 
     return icon;
