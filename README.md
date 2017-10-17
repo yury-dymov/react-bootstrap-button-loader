@@ -39,6 +39,9 @@ Buttons with icons are better!
 
 Provided icon is shown if Button is not in a loading state. Otherwise Spinner is rendered.
 
+### spinAlignment: string, default 'left'
+Controls spinAlignment, supported values: 'left' and 'right'
+
 ### spinColor: string, default: '#fff'
 Spinner color for loading state.
 

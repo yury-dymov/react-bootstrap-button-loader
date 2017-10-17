@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-button-loader",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React ButtonLoader with Bootstrap flavor",
   "main": "dist/index.js",
   "scripts": {
