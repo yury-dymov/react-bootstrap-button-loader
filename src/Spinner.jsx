@@ -5,6 +5,7 @@ import SpinnerIcon from 'react-loader';
 const propTypes = {
   spinColor:      PropTypes.string,
   spinConfig:     PropTypes.object,
+  spinAlignment:  PropTypes.string
 };
 
 function Spinner({
@@ -15,6 +16,7 @@ function Spinner({
     radius: 3,
     width:  2,
   },
+  spinAlignment   = 'left',
   ...rest,
 }) {
   const style = {
@@ -24,8 +26,14 @@ function Spinner({
     width:        '16px',
   };
 
+  const spinAlignmentStyle = {
+    display: 'inline=block',
+    float:   spinAlignment + ' !important',
+    padding: '0 10px'
+  };
+
   return (
-    <div style={{ display: 'inline-block' }} {...rest}>
+    <div style={spinAlignmentStyle} {...rest}>
       <div style={style}>
         <SpinnerIcon {...spinConfig} color={spinColor} loaded={false} />
       </div>
