@@ -27,7 +27,7 @@ function Spinner({
   };
 
   const spinAlignmentStyle = {
-    display: 'inline=block',
+    display: 'inline-block',
     float:   spinAlignment + ' !important',
     padding: '0 10px'
   };
