@@ -19,18 +19,18 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')
       }
     }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin()
   ],
   module:  {
-    loaders: [
-      { include: /\.jsx?$/, loader: 'babel', exclude: /node_modules/ }
+    rules: [
+      { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ }
     ]
   },
   resolve: {
-    root: path.join(__dirname, 'src'),
-    modulesDirectories: [ 'node_modules' ],
-    extensions: ['', '.js', '.jsx']
+    modules: [
+      path.join(__dirname, 'src'),
+      'node_modules'
+    ],
+    extensions: ['.js', '.jsx']
   }
 };
 

@@ -1,6 +1,6 @@
 import React     from 'react';
 import PropTypes from 'prop-types';
-import Button    from 'react-bootstrap/lib/Button';
+import Button    from 'react-bootstrap/Button';
 import Spinner   from './Spinner';
 
 const propTypes = {
@@ -10,18 +10,20 @@ const propTypes = {
   icon:           PropTypes.node,
   loading:        PropTypes.bool,
   spinColor:      PropTypes.string,
-  spinAlignment:  PropTypes.string
+  spinAlignment:  PropTypes.string,
+  variant:        PropTypes.string,
 };
 
 function ButtonLoader({
-  bsStyle   = 'default',
+  bsStyle   = null,
   children  = null,
   disabled  = false,
   icon      = null,
   loading   = false,
   spinColor = '#fff',
   spinAlignment = 'left',
-  ...rest,
+  variant = 'default',
+  ...rest
 }) {
   function renderIcon() {
     if (loading) {
@@ -33,7 +35,7 @@ function ButtonLoader({
 
   const buttonDisabled = disabled || loading;
 
-  return <Button bsStyle={bsStyle} disabled={buttonDisabled} {...rest}>{renderIcon()} {children}</Button>;
+  return <Button variant={bsStyle || variant} disabled={buttonDisabled} {...rest}>{renderIcon()} {children}</Button>;
 }
 
 ButtonLoader.propTypes = propTypes;

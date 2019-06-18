@@ -17,7 +17,7 @@ function Spinner({
     width:  2,
   },
   spinAlignment   = 'left',
-  ...rest,
+  ...rest
 }) {
   const style = {
     display:      'inline-block',
