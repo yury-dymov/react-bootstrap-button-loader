@@ -8,6 +8,10 @@ Bootstrap Button with Spinner feature
 [![Build Status](https://img.shields.io/travis/yury-dymov/react-bootstrap-button-loader/master.svg?style=flat)](https://travis-ci.org/yury-dymov/react-bootstrap-button-loader)
 [![Coverage Status](https://coveralls.io/repos/github/yury-dymov/react-bootstrap-button-loader/badge.svg?branch=master)](https://coveralls.io/github/yury-dymov/react-bootstrap-button-loader?branch=master)
 
+# Versioning
+v2 supports React Bootstrap v1.0.0+
+v1 supports React Bootstrap v0.x.x
+
 # Demo
 Demo and playground are available [here](https://yury-dymov.github.io/react-bootstrap-button-loader/)
 
