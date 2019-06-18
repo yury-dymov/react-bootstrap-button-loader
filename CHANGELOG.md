@@ -1,3 +1,6 @@
+### 17th June 2019 - Version 1.0.13
+- Max version for react-bootstrap
+
 ### 15th June 2018 - Version 1.0.12
 - Deps update
 
