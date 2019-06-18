@@ -27,7 +27,8 @@ import Button from 'react-bootstrap-button-loader';
 
 ### ~bsStyle: string, default: null~
 Bootstrap style, supported values: `default`, `primary`, `success`, `info`, `warning`, `danger`, `link`.
-Deprecated in a favor of `variant`
+
+*Deprecated in a favor of `variant`*
 
 ### disabled: boolean, default: false
 Set this prop `true` to disable button.
