@@ -22,7 +22,7 @@ function ButtonLoader({
   loading   = false,
   spinColor = '#fff',
   spinAlignment = 'left',
-  variant = 'default',
+  variant = 'primary',
   ...rest
 }) {
   function renderIcon() {
