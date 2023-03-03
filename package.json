@@ -44,7 +44,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "jsdom": "^15.1.1",
-    "mocha": "^5.2.0",
+    "mocha": "^10.2.0",
     "nyc": "^13.1.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
